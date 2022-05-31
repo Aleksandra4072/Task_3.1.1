@@ -1,11 +1,14 @@
 package com.example.task311.model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.Column;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "users")
@@ -16,9 +19,13 @@ public class User {
     private long id;
 
     @Column (name = "first_name")
+    @NotEmpty(message = "Name may not be empty")
     private String firstName;
+
     @Column (name = "last_name")
+    @NotEmpty(message = "Last name may not be empty")
     private String lastName;
+
     @Column (name = "email")
     private String email;
 

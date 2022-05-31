@@ -9,9 +9,6 @@
 </head>
 <body>
 <form action="#" th:action="@{/addUserToDB}" th:object="${user}" method="post">
-    <label for="id">ID</label>
-    <input readonly type="number" th:field="*{id}" id="id">
-
     <br/>
     <label for="firstName">First name</label>
     <input type="text" th:field="*{firstName}" id="firstName">
